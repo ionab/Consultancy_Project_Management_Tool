@@ -15,7 +15,9 @@ CREATE TABLE projects(
   name VARCHAR(255),
   client VARCHAR(255),
   time_budget FLOAT,
-  expenses_budget FLOAT
+  expenses_budget FLOAT,
+  project_status VARCHAR(255)
+
 );
 
 CREATE TABLE time_units(
