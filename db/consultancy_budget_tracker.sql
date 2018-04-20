@@ -6,6 +6,7 @@ DROP TABLE projects;
 CREATE TABLE employees(
   id SERIAL8 primary key,
   name VARCHAR(255),
+  job_title VARCHAR(255),
   hourly_rate FLOAT
 );
 
