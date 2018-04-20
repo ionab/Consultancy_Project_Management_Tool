@@ -159,7 +159,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 50.00,
     "vat" => 13.20,
-    "category" => "accomodation"
+    "category" => "accomodation",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense1.save
@@ -167,7 +169,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 5.0,
     "vat" => 1.20,
-    "category" => "subsistence"
+    "category" => "subsistence",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense2.save
@@ -175,7 +179,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 10.50,
     "vat" => 1.20,
-    "category" => "subsistence"
+    "category" => "subsistence",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense3.save
@@ -183,7 +189,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 50.50,
     "vat" => 15.20,
-    "category" => "accomodation"
+    "category" => "accomodation",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense4.save
@@ -191,7 +199,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 300,
     "vat" => 25,
-    "category" => "meeting clients"
+    "category" => "meeting clients",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense5.save
@@ -199,7 +209,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 900,
     "vat" => 90,
-    "category" => "meeting clients"
+    "category" => "meeting clients",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense6.save
@@ -207,7 +219,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 3.00,
     "vat" => 1.20,
-    "category" => "subsistence"
+    "category" => "subsistence",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense7.save
@@ -215,7 +229,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 90.00,
     "vat" => 15.00,
-    "category" => "travel"
+    "category" => "travel",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense8.save
@@ -223,7 +239,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 500,
     "vat" => 0.00,
-    "category" => "equipment"
+    "category" => "equipment",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense9.save
@@ -231,7 +249,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 1.50,
     "vat" => 0.10,
-    "category" => "subsistence"
+    "category" => "subsistence",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense10.save
@@ -239,7 +259,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 45,
     "vat" => 12.20,
-    "category" => "accomodation"
+    "category" => "accomodation",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense11.save
@@ -247,7 +269,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 19.50,
     "vat" => 3.20,
-    "category" => "subsistence"
+    "category" => "subsistence",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense12.save
@@ -255,7 +279,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 86,
     "vat" => 15,
-    "category" => "accomodation"
+    "category" => "accomodation",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense13.save
@@ -263,7 +289,9 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 10.50,
     "vat" => 1.20,
-    "category" => "subsistence"
+    "category" => "subsistence",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @expense14.save
@@ -271,7 +299,10 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 4,
     "vat" => 1.20,
-    "category" => "subsistence"
+    "category" => "subsistence",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @expense15.save
@@ -279,7 +310,10 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 10.50,
     "vat" => 1.20,
-    "category" => "subsistence"
+    "category" => "subsistence",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @expense16.save
@@ -287,7 +321,10 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 90,
     "vat" => 1.20,
-    "category" => "accomodation"
+    "category" => "accomodation",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @expense17.save
@@ -295,7 +332,10 @@ Project.delete_all()
   {
     "cost_excluding_vat" => 200,
     "vat" => 40,
-    "category" => "meeting clients"
+    "category" => "meeting clients",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @expense18.save
@@ -304,105 +344,146 @@ Project.delete_all()
 @time_unit1 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit1.save()
 @time_unit2 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit2.save()
 @time_unit3 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit3.save()
 @time_unit4 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit4.save()
 @time_unit5 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit5.save()
 @time_unit6 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit6.save()
 @time_unit7 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit7.save()
 @time_unit8 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit8.save()
 @time_unit9 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit9.save()
 @time_unit10 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit10.save()
 @time_unit11 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1
+    .id,
+    "project_id" => @project2.id
   }
 )
 @time_unit11.save()
 @time_unit12 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1.id,
+    "project_id" => @project2.id
   }
 )
 @time_unit12.save()
 @time_unit13 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1.id,
+    "project_id" => @project1.id
   }
 )
 @time_unit13.save()
 @time_unit14 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1.id,
+    "project_id" => @project1.id
   }
 )
 @time_unit14.save()
 @time_unit15 = TimeUnit.new(
   {
     "hours" => 7.5,
-    "category" => "project management"
+    "category" => "project management",
+    "employee_id" => @employee1.id,
+    "project_id" => @project1.id
   }
 )
 @time_unit15.save()
