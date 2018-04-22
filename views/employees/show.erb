@@ -1,0 +1,7 @@
+<h1>Employee Details</h1>
+<p>Name: <%= @employee.name%> </p>
+<p>Job Title: <%= @employee.job_title%> </p>
+<p>Hourly Rate: <%= @employee.hourly_rate%></p>
+<form action="/employees/<%= @employee.id%>/edit" method = "get">
+<input type="submit" value="Edit Employee">
+</form>

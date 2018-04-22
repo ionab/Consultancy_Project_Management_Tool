@@ -1,0 +1,13 @@
+<h1>Expenses</h1>
+<hr/>
+<p><a href= "/expenses/new">Add new expense</a>
+  <hr/>
+<% @expenses.each do |expense| %>
+  <p>Cost, excluding VAT: <%= expense.cost_excluding_vat%> </p>
+  <p>VAT: <%= expense.vat%> </p>
+  <p>Category: <%= expense.category%> </p>
+  <p>Project ID: <%= expense.project_id%> </p>
+  <p>Employee ID: <%= expense.employee_id%> </p>
+  <p><a href="/expenses/<%=expense.id%>">View Expense</a></p>
+<hr/>
+<%end%>

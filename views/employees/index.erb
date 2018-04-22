@@ -1,0 +1,11 @@
+<h1>Employees</h1>
+<hr/>
+<p><a href= "/employees/new">Add new employee</a>
+  <hr/>
+<% @employees.each do |employee| %>
+  <p>Name: <%= employee.name%> </p>
+  <p>Job title: <%= employee.job_title%> </p>
+  <p>Hourly Rate: <%= employee.hourly_rate%> </p>
+  <p><a href="/employees/<%=employee.id%>">View Employee</a></p>
+<hr/>
+<%end%>
