@@ -35,12 +35,16 @@ end
 
 #edit
 get "/time-units/:id/edit" do
- @time_units = TimeUnit.find_by_id(params[:id])
+  @employees = Employee.find_all()
+  @projects = Project.all()
+  @time_units = TimeUnit.find_by_id(params[:id])
  erb(:"time_units/edit")
 end
 
 #update
-post "/time-units/:id/edit" do
+post "/time-units/:id/update" do
+  @projects = Project.all()
+  @employees = Employee.find_all()
   @time_units = TimeUnit.new(params)
   @time_units.update
   redirect to "/time-units"

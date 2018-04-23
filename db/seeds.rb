@@ -2,6 +2,7 @@ require_relative( "../models/employee.rb" )
 require_relative( "../models/expense.rb" )
 require_relative( "../models/project.rb" )
 require_relative( "../models/time_unit.rb" )
+require('pry')
 
 TimeUnit.delete_all()
 Expense.delete_all()
@@ -487,3 +488,6 @@ Project.delete_all()
   }
 )
 @time_unit15.save()
+
+binding.pry
+nil

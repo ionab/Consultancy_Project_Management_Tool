@@ -37,11 +37,15 @@ end
 #edit
 get "/expenses/:id/edit" do
  @expenses = Expense.find_by_id(params[:id])
+ @projects = Project.all()
+ @employees = Employee.find_all()
  erb(:"expenses/edit")
 end
 
 #update
-post "/expenses/:id/edit" do
+post "/expenses/:id/update" do
+  @projects = Project.all()
+  @employees = Employee.find_all()
   @expenses = Expense.new(params)
   @expenses.update
   redirect to "/expenses"

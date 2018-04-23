@@ -2,6 +2,7 @@ require("sinatra")
 require("sinatra/contrib/all")
 
 
+
 require_relative("../models/project.rb")
 
 #index
@@ -18,6 +19,7 @@ end
 #show
 get "/projects/:id" do
   @projects = Project.find_by_id(params[:id])
+
   erb(:"projects/show")
 end
 

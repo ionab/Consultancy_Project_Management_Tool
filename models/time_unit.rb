@@ -81,9 +81,19 @@ class TimeUnit
    return project
  end
  def find_employee()
-  sql = "SELECT * FROM employees WHERE id = $1;"
-  values = [@employee_id]
-  employee = SqlRunner.run(sql, values).map { |employee| Employee.new(employee) }[0]
-  return employee
-end
+    sql = "SELECT * FROM employees WHERE id = $1;"
+    values = [@employee_id]
+    employee = SqlRunner.run(sql, values).map { |employee| Employee.new(employee) }[0]
+    return employee
+  end
+# al's help
+  # def calculate_spend()
+  #   sql = "SELECT employees.hourly_rate FROM employees WHERE employees.id = $1"
+  #   values = [@employee_id]
+  #   result = SqlRunner.run(sql)
+  #   return result
+  #   # multiply the hourly rate of the employee by the number of hours worked
+  # end
+
+  
 end

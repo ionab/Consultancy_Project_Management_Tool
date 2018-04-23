@@ -1,4 +1,8 @@
 require_relative('../db/sql_runner')
+require_relative('employee.rb')
+require_relative('time_unit.rb')
+require_relative('expense.rb')
+require("pry-byebug")
 
 class Project
 
@@ -39,6 +43,7 @@ class Project
     result = Project.new(projects.first)
     return result
   end
+
   def update()
     sql = "UPDATE projects SET (name, client, time_budget, expenses_budget, project_status) = ($1, $2, $3, $4, $5) WHERE id = $6"
     values = [@name, @client, @time_budget, @expenses_budget, @project_status, @id]
@@ -49,5 +54,24 @@ class Project
     sql = "SELECT * FROM projects"
     SqlRunner.run(sql)
   end
+
+  def find_time_by_id(id)
+    sql = "SELECT * FROM time_units WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    @id = result[0]["id"].to_i
+    result_hash = result[0]  #convert here from database object to a ruby object
+    return TimeUnit.new(result_hash)
+  end
+
+  def self.total_time_spend(id)
+   sql = "SELECT SUM (employees.hourly_rate * time_units.hours) FROM employees INNER JOIN time_units ON employees.id = time_units.employee_id WHERE time_units.project_id = $1;"
+   values = [id]
+   result = SqlRunner.run(sql, values)
+   spend = result[0]
+   return spend
+  end
+  # binding.pry
+  # nil
 
 end

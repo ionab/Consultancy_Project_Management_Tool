@@ -1,1 +1,33 @@
-<p> hello world</p>
+<form action="/time-units/<%=@time_units.id%>/update" method = "post">
+
+  <label for="hours">Hours</label>
+  <input type="number" id="hours" name="hours" value="<%=@time_units.hours%>">
+
+  <label for="category">Category:</label>
+  <input type="text" id="category" name="category" value="<%=@time_units.category%>">
+
+  <label for="project_id">Project:</label>
+  <select name="project_id" id="project_id" selected="<%= @time_units.project_id  %>">
+    <% @projects.each do |project| %>
+      <% if project.id == @time_units.project_id %>
+        <option value=<%= project.id %> selected><%= project.name %></option>
+      <% else %>
+        <option value=<%= project.id %>><%= project.name %></option>
+      <% end %>
+    <% end %>
+  </select>
+
+  <label for="employee_id">Employee:</label>
+  <select name="employee_id" id="employee_id" selected="<%= @time_units.employee_id  %>">
+    <% @employees.each do |employee| %>
+      <% if employee.id == @time_units.employee_id %>
+        <option value=<%= employee.id %> selected><%= employee.name %></option>
+      <% else %>
+        <option value=<%= employee.id %>><%= employee.name %></option>
+      <% end %>
+    <% end %>
+  </select>
+
+<input type="submit" value="Update Expense">
+
+</form>
