@@ -75,5 +75,18 @@ class Expense
     return result
   end
 
+  def find_project()
+   sql = "SELECT * FROM projects WHERE id = $1;"
+   values = [@project_id]
+   project = SqlRunner.run(sql, values).map { |project| Project.new(project) }[0]
+   return project
+ end
+ def find_employee()
+  sql = "SELECT * FROM employees WHERE id = $1;"
+  values = [@employee_id]
+  employee = SqlRunner.run(sql, values).map { |employee| Employee.new(employee) }[0]
+  return employee
+end
+
 
 end

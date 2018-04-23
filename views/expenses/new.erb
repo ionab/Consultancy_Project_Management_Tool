@@ -1,16 +1,26 @@
-<form action="/expenses/new" method = "post">
+<form action="/expenses" method = "post">
 
-  <label for="cost_excluding_vat">Cost, excluding VAT:</label>
-  <input type="text" id="cost_excluding_vat" name="cost_excluding_vat">
-  <label for="vat">VAT:</label>
-  <input type="text" id="vat" name = "vat"
+  <label for="cost_excluding_vat">Cost, excluding VAT(GBP):</label>
+  <input type="number" id="cost_excluding_vat" name="cost_excluding_vat">
+  <label for="vat">VAT(GBP):</label>
+  <input type="number" id="vat" name = "vat">
   <label for="category">Category:</label>
   <input type="text" id="category" name="category">
-  <label for="project_id">Project ID:</label>
-  <input type="number" id="project_id" name="project_id">
-  <label for="employee_id">Employee ID:</label>
-  <input type="number" id="category" name="category">
 
-<input type="submit" value="Create New Employee">
+  <label for="project_id">Project:</label>
+  <select name="project_id" id="project_id">
+    <% @projects.each do |project| %>
+    <option value="<%= project.id%>"><%=project.name %></option>
+  <%end%>
+  </select>
+
+  <label for="employee_id">Employee:</label>
+  <select name="employee_id" id="employee_id">
+    <% @employees.each do |employee| %>
+    <option value="<%= employee.id%>"><%=employee.name %></option>
+  <%end%>
+  </select>
+
+<input type="submit" value="Create New Expense">
 
 </form>

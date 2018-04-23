@@ -3,6 +3,9 @@ require("sinatra/contrib/all")
 
 
 require_relative("../models/time_unit.rb")
+require_relative("../models/project.rb")
+require_relative("../models/employee.rb")
+
 
 #index
 get "/time-units" do
@@ -12,6 +15,8 @@ end
 
  #new
 get "/time-units/new" do
+  @projects = Project.all()
+  @employees = Employee.find_all()
   erb(:"time_units/new")
 end
 

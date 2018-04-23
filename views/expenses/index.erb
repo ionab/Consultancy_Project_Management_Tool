@@ -3,11 +3,11 @@
 <p><a href= "/expenses/new">Add new expense</a>
   <hr/>
 <% @expenses.each do |expense| %>
-  <p>Cost, excluding VAT: <%= expense.cost_excluding_vat%> </p>
-  <p>VAT: <%= expense.vat%> </p>
+  <p>Cost, excluding VAT: £<%= expense.cost_excluding_vat%> </p>
+  <p>VAT: £<%= expense.vat%> </p>
   <p>Category: <%= expense.category%> </p>
-  <p>Project ID: <%= expense.project_id%> </p>
-  <p>Employee ID: <%= expense.employee_id%> </p>
+  <p>Project: <%= expense.find_project().name %> </p>
+  <p>Employee: <%= expense.find_employee().name %> </p>
   <p><a href="/expenses/<%=expense.id%>">View Expense</a></p>
 <hr/>
 <%end%>

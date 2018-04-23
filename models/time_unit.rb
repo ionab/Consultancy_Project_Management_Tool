@@ -65,7 +65,6 @@ class TimeUnit
     return Employee.new(employees_hash)
   end
 
-
   def self.find_by_id(id)
     sql = "SELECT * FROM time_units WHERE id = $1"
     values = [id]
@@ -74,4 +73,17 @@ class TimeUnit
     result_hash = result[0]  #convert here from database object to a ruby object
     return TimeUnit.new(result_hash)
   end
+
+  def find_project()
+   sql = "SELECT * FROM projects WHERE id = $1;"
+   values = [@project_id]
+   project = SqlRunner.run(sql, values).map { |project| Project.new(project) }[0]
+   return project
+ end
+ def find_employee()
+  sql = "SELECT * FROM employees WHERE id = $1;"
+  values = [@employee_id]
+  employee = SqlRunner.run(sql, values).map { |employee| Employee.new(employee) }[0]
+  return employee
+end
 end

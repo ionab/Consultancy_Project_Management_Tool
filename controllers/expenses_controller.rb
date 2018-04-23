@@ -3,15 +3,21 @@ require("sinatra/contrib/all")
 
 
 require_relative("../models/expense.rb")
+require_relative("../models/project.rb")
+require_relative("../models/employee.rb")
 
 #index
 get "/expenses" do
   @expenses = Expense.all()
+  @projects = Project.all()
+  @employees = Employee.find_all()
   erb(:"expenses/index")
 end
 
  #new
 get "/expenses/new" do
+  @projects = Project.all()
+  @employees = Employee.find_all()
   erb(:"expenses/new")
 end
 
