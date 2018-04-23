@@ -1,5 +1,6 @@
 require("sinatra")
 require("sinatra/contrib/all")
+require("pry-byebug")
 
 
 require_relative("../models/employee.rb")
@@ -30,12 +31,12 @@ end
 
 #edit
 get "/employees/:id/edit" do
- @employee = Employee.find_by_id(params[:id])
+ @employee = Employee.find_by_id(params[:id].to_i)
  erb(:"employees/edit")
 end
 
 #update
-post "/employees/:id/edit" do
+post "/employees/:id/update" do
   employee = Employee.new(params)
   employee.update
   redirect to "/employees"

@@ -40,7 +40,7 @@ class Project
     return result
   end
   def update()
-    sql = "UPDATE projects SET (name, client, time_budget, expenses_budget, project_status) VALUES ($1, $2, $3, $4, $5) WHERE id = $6"
+    sql = "UPDATE projects SET (name, client, time_budget, expenses_budget, project_status) = ($1, $2, $3, $4, $5) WHERE id = $6"
     values = [@name, @client, @time_budget, @expenses_budget, @project_status, @id]
     SqlRunner.run(sql, values)
   end

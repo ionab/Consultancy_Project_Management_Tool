@@ -1,0 +1,20 @@
+<form action="/projects/<%=@projects.id%>/update" method = "post">
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" value="<%=@projects.name%>">
+
+  <label for="client">Client:</label>
+  <input type="text" id="client" name="client" value="<%=@projects.client%>">
+
+  <label for="time_budget">Time Budget(GBR):</label>
+  <input type="number" id="time_budget" name="time_budget" value= "<%=@projects.time_budget %>">
+
+  <label for="expenses_budget">Expenses Budget(GBR):</label>
+  <input type="number" id="expenses_budget" name="expenses_budget" value= "<%=@projects.expenses_budget %>">
+
+  <label for="project_status">Project Status:</label>
+  <input type="text" id="project_status" name="project_status" value= "<%=@projects.project_status %>">
+
+<input type="submit" value="Update project">
+
+</form>

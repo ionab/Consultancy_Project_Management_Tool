@@ -1,13 +1,14 @@
-<form action="/employees/<%=@employee.id%>/edit" method = "post">
+<form action="/employees/<%=@employee.id%>/update" method = "post">
 
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" value="<%=@employee.name%>">
 
   <label for="job_title">Job Title:</label>
-  <input type="text" id="job_title" name="job_title" value="<%=@employee.job_title%>"
+  <input type="text" id="job_title" name="job_title" value="<%=@employee.job_title%>">
 
   <label for="hourly_rate">Hourly Rate:</label>
-  <input type="hourly_rate" id="hourly_rate" name="Hourly Rate" value= "<%=@employee.hourly_rate %>">
+  <input type="number" id="hourly_rate" name="hourly_rate" value= "<%=@employee.hourly_rate %>">
+
 <input type="submit" value="Update Employee">
 
 </form>

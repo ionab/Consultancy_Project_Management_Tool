@@ -37,8 +37,8 @@ class Employee
     return result
   end
   def update()
-    sql = "UPDATE employees SET (name, job_title, hourly_rate) VALUES ($1, $2, $3) WHERE id = $4"
-    values = [@name, @job_title, @hourly_rate.to_i, @id.to_i]
+    sql = "UPDATE employees SET (name, job_title, hourly_rate) = ($1, $2, $3) WHERE id = $4"
+    values = [@name, @job_title, @hourly_rate, @id]
     SqlRunner.run(sql, values)
   end
 
