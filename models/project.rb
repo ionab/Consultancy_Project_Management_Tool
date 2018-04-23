@@ -25,7 +25,7 @@ class Project
     @id = projects.first["id"].to_i
   end
 
-  def self.find_all()
+  def self.all()
     sql = "SELECT * FROM projects"
     values = []
     projects = SqlRunner.run(sql, values)

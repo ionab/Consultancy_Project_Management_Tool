@@ -12,7 +12,7 @@ end
 
  #new
 get "/expenses/new" do
-  erb(:"expenses/new_expense")
+  erb(:"expenses/new")
 end
 
 #show

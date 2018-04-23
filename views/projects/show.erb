@@ -1,0 +1,9 @@
+<h1>Project Details</h1>
+<p>Name: <%= @projects.name%> </p>
+<p>Client: <%= @projects.client%> </p>
+<p>Time Budget: <%= @projects.time_budget%></p>
+<p>Expenses Budget: <%= @projects.expenses_budget%></p>
+<p>Project Status: <%= @projects.project_status%></p>
+<form action="/projects/<%= @projects.id%>/edit" method = "get">
+<input type="submit" value="Edit Project">
+</form>

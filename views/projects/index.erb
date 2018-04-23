@@ -1,0 +1,13 @@
+<h1>Projects</h1>
+<hr/>
+<p><a href= "/projects/new">Add new project</a>
+  <hr/>
+<% @projects.each do |project| %>
+  <p>Name: <%= project.name%> </p>
+  <p>Client: <%= project.client%> </p>
+  <p>Time Budget: <%= project.time_budget%> </p>
+  <p>Expenses Budget: <%= project.expenses_budget%> </p>
+  <p>Project Status: <%= project.project_status%> </p>
+  <p><a href="/projects/<%=project.id%>">View Project</a></p>
+<hr/>
+<%end%>

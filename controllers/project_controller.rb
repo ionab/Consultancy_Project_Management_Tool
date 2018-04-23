@@ -2,17 +2,17 @@ require("sinatra")
 require("sinatra/contrib/all")
 
 
-require_relative("../models/projects.rb")
+require_relative("../models/project.rb")
 
 #index
 get "/projects" do
-  @projects = Expense.all()
+  @projects = Project.all()
   erb(:"projects/index")
 end
 
  #new
 get "/projects/new" do
-  erb(:"projectss/new_projects")
+  erb(:"projects/new")
 end
 
 #show

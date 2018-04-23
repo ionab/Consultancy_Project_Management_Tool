@@ -70,9 +70,10 @@ class Expense
   def self.find_by_id(id)
     sql = "SELECT * FROM expenses WHERE id = $1"
     values = [id]
-    result = SqlRunner.run(sql, values)
-    @id = result[0]["id"].to_i
-    result_hash = result[0]  #convert here from database object to a ruby object
-    return Expense.new(result_hash)
+    expenses = SqlRunner.run(sql, values)
+    result = Expense.new(expenses.first)
+    return result
   end
+
+
 end

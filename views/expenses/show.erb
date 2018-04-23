@@ -1,0 +1,10 @@
+<h1>Expenses Details</h1>
+<p>Cost Excluding Vat: <%= @expenses.cost_excluding_vat%> </p>
+<p>VAT: <%= @expenses.vat%> </p>
+<p>Category: <%= @expenses.category%></p>
+<p>Project ID: <%= @expenses.project_id%></p>
+<p>Employee ID: <%= @expenses.employee_id%></p>
+
+<form action="/expenses/<%= @expenses.id%>/edit" method = "get">
+<input type="submit" value="Edit Employee">
+</form>

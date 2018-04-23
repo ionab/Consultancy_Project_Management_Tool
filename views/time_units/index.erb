@@ -1,0 +1,12 @@
+<h1>Timesheets</h1>
+<hr/>
+<p><a href= "/time-units/new">Add new Time</a>
+  <hr/>
+<% @time_units.each do |time| %>
+  <p>Hours: <%= time.hours%> </p>
+  <p>Category: <%= time.category%> </p>
+  <p>Project ID: <%= time.project_id%> </p>
+  <p>Employee ID: <%= time.employee_id%> </p>
+  <p><a href="/time-units/<%=time.id%>">View Time</a></p>
+<hr/>
+<%end%>
