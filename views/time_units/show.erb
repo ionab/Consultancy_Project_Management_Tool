@@ -1,8 +1,8 @@
 <h1>Time Details</h1>
 <p>Hours: <%= @time_units.hours%> </p>
-<p>Category: <%= @time_units.hours%> </p>
-<p>Project ID: <%= @time_units.project_id%></p>
-<p>Employee ID: <%= @time_units.employee_id%></p>
+<p>Category: <%= @time_units.category%> </p>
+<p>Project: <%= @time_units.find_project().name %> </p>
+<p>Employee: <%= @time_units.find_employee().name %> </p>
 <form action="/time-units/<%= @time_units.id%>/edit" method = "get">
 <input type="submit" value="Edit Time">
 </form>
