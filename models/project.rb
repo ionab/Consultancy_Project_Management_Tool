@@ -71,12 +71,10 @@ class Project
    spend = result[0]
    return spend["sum"].to_f
   end
-  # binding.pry
-  # nil
 
   def total_expenses_spend()
     sql = "SELECT SUM (expenses.cost_excluding_vat + expenses.vat) FROM expenses WHERE expenses.project_id = $1"
-    values = [$1]
+    values = [@id]
     result = SqlRunner.run(sql, values)
     spend = result[0]
     return spend["sum"].to_f
