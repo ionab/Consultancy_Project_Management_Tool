@@ -7,10 +7,10 @@
   <input type="text" id="client" name="client" value="<%=@projects.client%>">
 
   <label for="time_budget">Time Budget(GBP):</label>
-  <input type="number" id="time_budget" name="time_budget" value= "<%= '%.2f' % @projects.time_budget %>">
+  <input type="number" step="0.01" id="time_budget" name="time_budget" value= "<%= '%.2f' % @projects.time_budget %>">
 
   <label for="expenses_budget">Expenses Budget(GBP):</label>
-  <input type="number" id="expenses_budget" name="expenses_budget" value= "<%= '%.2f' % @projects.expenses_budget %>">
+  <input type="number"  step="0.01" id="expenses_budget" name="expenses_budget" value= "<%= '%.2f' % @projects.expenses_budget %>">
 
   <label for="project_status">Project Status:</label>
   <input type="text" id="project_status" name="project_status" value= "<%=@projects.project_status %>">

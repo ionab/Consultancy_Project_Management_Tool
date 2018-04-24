@@ -4,10 +4,10 @@
 <form action="/expenses/<%=@expenses.id%>/update" method = "post">
 
   <label for="cost_excluding_vat">Cost Excluding Vat: £</label>
-  <input type="number" id="cost_excluding_vat" name="cost_excluding_vat" value="<%= '%.2f' % @expenses.cost_excluding_vat%>">
+  <input type="number"  step="0.01" id="cost_excluding_vat" name="cost_excluding_vat" value="<%= '%.2f' % @expenses.cost_excluding_vat%>">
 
   <label for="vat">VAT: £</label>
-  <input type="number" id="vat" name="vat" value="<%= '%.2f' % @expenses.vat%>">
+  <input type="number"  step="0.01" id="vat" name="vat" value="<%= '%.2f' % @expenses.vat%>">
 
   <label for="category">Category:</label>
   <input type="text" id="category" name="category" value= "<%= @expenses.category %>">
