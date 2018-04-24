@@ -19,7 +19,6 @@ end
 #show
 get "/projects/:id" do
   @projects = Project.find_by_id(params[:id])
-
   erb(:"projects/show")
 end
 
