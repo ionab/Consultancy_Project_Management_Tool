@@ -13,8 +13,8 @@
   </tr>
 <% @expenses.each do |expense| %>
   <tr>
-    <td>£<%= expense.cost_excluding_vat%> </td>
-    <td>£<%= expense.vat%> </td>
+    <td>£<%=  '%.2f' % expense.cost_excluding_vat%> </td>
+    <td>£<%=  '%.2f' % expense.vat%> </td>
     <td><%= expense.category%> </td>
     <td><%= expense.find_project().name %> </td>
     <td><%= expense.find_employee().name %> </td>

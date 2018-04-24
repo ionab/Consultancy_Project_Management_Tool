@@ -1,6 +1,6 @@
 <h1>Expenses Details</h1>
-<p>Cost Excluding Vat: <%= @expenses.cost_excluding_vat%> </p>
-<p>VAT: <%= @expenses.vat%> </p>
+<p>Cost Excluding Vat: £<%=  '%.2f' % @expenses.cost_excluding_vat%> </p>
+<p>VAT: £<%=  '%.2f' %  @expenses.vat%> </p>
 <p>Category: <%= @expenses.category%></p>
 <p>Project: <%= @expenses.find_project().name %> </p>
 <p>Employee: <%= @expenses.find_employee().name %> </p>

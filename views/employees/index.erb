@@ -13,7 +13,7 @@
   <tr>
     <td><%= employee.name%> </td>
     <td><%= employee.job_title%> </td>
-    <td>£<%= employee.hourly_rate%> </td>
+    <td>£<%= '%.2f' %  employee.hourly_rate%> </td>
     <td><a href="/employees/<%=employee.id%>">View</a></td>
   </tr>
   <%end%>

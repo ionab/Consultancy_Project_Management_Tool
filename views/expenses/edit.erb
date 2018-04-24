@@ -1,13 +1,13 @@
 <form action="/expenses/<%=@expenses.id%>/update" method = "post">
 
   <label for="cost_excluding_vat">Cost Excluding Vat: £</label>
-  <input type="number" id="cost_excluding_vat" name="cost_excluding_vat" value="<%=@expenses.cost_excluding_vat%>">
+  <input type="number" id="cost_excluding_vat" name="cost_excluding_vat" value="<%= '%.2f' % @expenses.cost_excluding_vat%>">
 
   <label for="vat">VAT: £</label>
-  <input type="number" id="vat" name="vat" value="<%=@expenses.vat%>">
+  <input type="number" id="vat" name="vat" value="<%= '%.2f' % @expenses.vat%>">
 
   <label for="category">Category:</label>
-  <input type="text" id="category" name="category" value= "<%=@expenses.category %>">
+  <input type="text" id="category" name="category" value= "<%= @expenses.category %>">
 
   <label for="project_id">Project:</label>
   <select name="project_id" id="project_id" selected="<%= @expenses.project_id  %>">

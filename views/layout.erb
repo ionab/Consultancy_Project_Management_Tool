@@ -8,29 +8,33 @@
   <link rel="stylesheet" type="text/css" href="/styles/structure.css">
   <title>Consultancy Company</title>
 </head>
-<nav>
-  <ul class="nav">
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/employees">Employees</a>
-    </li>
-    <li>
-      <a href="/time-units">Timesheets</a>
-    </li>
-    <li>
-      <a href="/expenses">Expenses</a>
-    </li>
-    <li>
-      <a href="/projects">Projects</a>
-    </li>
-  </ul>
-</nav>
 <body>
-<main>
-  <%= yield %>
-  </section>
-  </main>
+  <div class="page">
+      <nav>
+        <ul class="nav">
+          <li>
+            <a href="/"><img class = "navimage" src="/images/home.png" alt="home-logo"></a>
+          </li>
+          <li>
+            <a href="/employees"><img class = "navimage" src="/images/employees.png" alt="employees-logo"></a>
+          </li>
+          <li>
+            <a href="/time-units"><img class = "navimage" src="/images/time.png" alt="time-logo"></a>
+          </li>
+          <li>
+            <a href="/expenses"><img class = "navimage" src="/images/money.png" alt="money-logo"></a>
+          </li>
+          <li>
+            <a href="/projects"><img class = "navimage" src="/images/project.png" alt="project-logo"></a>
+          </li>
+        </ul>
+      </nav>
+    <div class="view">
+      <%= yield %>
+    </div>
+
+  </div>
+
 </body>
+
 </html>

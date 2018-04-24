@@ -16,8 +16,8 @@
 <tr>
   <td><%= project.name%> </td>
   <td><%= project.client%> </td>
-  <td>£<%= project.time_budget%> </td>
-  <td>£<%= project.expenses_budget%> </td>
+  <td>£<%= '%.2f' % project.time_budget%> </td>
+  <td>£<%= '%.2f' % project.expenses_budget %> </td>
   <td><%= project.project_status%> </td>
   <td><a href="/projects/<%=project.id%>">View</a></td>
 <tr/>

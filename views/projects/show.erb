@@ -1,10 +1,10 @@
 <h1>Project Details</h1>
 <p>Name: <%= @projects.name%> </p>
 <p>Client: <%= @projects.client%> </p>
-<p>Time Budget: £<%= @projects.time_budget%></p>
-<p>Time Spent: £<%= @projects.total_time_spend%></p>
-<p>Expenses Budget: £<%= @projects.expenses_budget%></p>
-<p>Expenses Spent: £<%= @projects.total_expenses_spend%></p>
+<p>Time Budget: £<%=  '%.2f' % @projects.time_budget%></p>
+<p>Time Spent: £<%=  '%.2f' % @projects.total_time_spend%></p>
+<p>Expenses Budget: £<%= '%.2f' %  @projects.expenses_budget%></p>
+<p>Expenses Spent: £<%= '%.2f' %  @projects.total_expenses_spend%></p>
 <p>Project Status: <%= @projects.project_status%></p>
 
 <form action="/projects/<%= @projects.id%>/edit" method = "get">

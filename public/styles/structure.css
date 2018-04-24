@@ -1,0 +1,57 @@
+h1 {
+  font: helvetica;
+}
+p {
+  font: helvetica;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #b3d9ff;
+}
+
+.page {
+  width: 100%;
+  height: 100% ;
+  display: inline-flex;
+
+}
+nav {
+  background-color: #b3d9ff ;
+ width: 30% ;
+ height: 100% ;
+  text-decoration: none;
+  
+}
+ul{
+list-style:none;
+margin:0;
+padding:0;
+}
+.view {
+  align-self: right ;
+  background-color: #b3d9ff ;
+  width: 70% ;
+  height: 100% ;
+  margin: 0px;
+}
+.navimage {
+  width: 50%;
+  height: 50%;
+}
+form {
+  align-self: center;
+}
+
+.headerimage {
+  width: 10%;
+  height: 100%;
+  display: inline-flex;
+}
+
+.mainimage {
+  width: 70%;
+  height: 50%;
+  display: inline-flex;
+}
