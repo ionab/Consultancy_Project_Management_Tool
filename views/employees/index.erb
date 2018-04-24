@@ -1,11 +1,20 @@
-<h1>Employees<img class = "headerimage" src="/images/consultancy_logo.jpeg" alt="company-logo"></h1>
+<h1><img class = "headerimage" src="/images/employees.png" alt="employees-logo">Employees</h1>
 <hr/>
 <p><a href= "/employees/new">Add new employee</a>
   <hr/>
-<% @employees.each do |employee| %>
-  <p>Name: <%= employee.name%> </p>
-  <p>Job title: <%= employee.job_title%> </p>
-  <p>Hourly Rate: <%= employee.hourly_rate%> </p>
-  <p><a href="/employees/<%=employee.id%>">View Employee</a></p>
-<hr/>
-<%end%>
+<table style = "width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Job Title</th>
+    <th>Hourly Rate</th>
+    <th>View Details</th>
+  </tr>
+  <% @employees.each do |employee| %>
+  <tr>
+    <td><%= employee.name%> </td>
+    <td><%= employee.job_title%> </td>
+    <td>£<%= employee.hourly_rate%> </td>
+    <td><a href="/employees/<%=employee.id%>">View</a></td>
+  </tr>
+  <%end%>
+</table>

@@ -1,13 +1,23 @@
-<h1>Expenses <img class = "headerimage" src="/images/consultancy_logo.jpeg" alt="company-logo"></h1>
+<h1>Expenses <img class = "headerimage" src="/images/money.png" alt="money-logo"></h1>
 <hr/>
 <p><a href= "/expenses/new">Add new expense</a>
   <hr/>
+<table style = "width: 100%">
+  <tr>
+    <th>Cost, excluding VAT</th>
+    <th>VAT</th>
+    <th>Category</th>
+    <th>Project</th>
+    <th>Employee</th>
+    <th>View Details</th>
+  </tr>
 <% @expenses.each do |expense| %>
-  <p>Cost, excluding VAT: £<%= expense.cost_excluding_vat%> </p>
-  <p>VAT: £<%= expense.vat%> </p>
-  <p>Category: <%= expense.category%> </p>
-  <p>Project: <%= expense.find_project().name %> </p>
-  <p>Employee: <%= expense.find_employee().name %> </p>
-  <p><a href="/expenses/<%=expense.id%>">View Expense</a></p>
-<hr/>
+  <tr>
+    <td>£<%= expense.cost_excluding_vat%> </td>
+    <td>£<%= expense.vat%> </td>
+    <td><%= expense.category%> </td>
+    <td><%= expense.find_project().name %> </td>
+    <td><%= expense.find_employee().name %> </td>
+    <td><a href="/expenses/<%=expense.id%>">View</a></td>
+</tr>
 <%end%>

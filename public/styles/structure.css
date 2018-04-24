@@ -6,20 +6,7 @@ p {
   background-color:  #b3d9ff;
 }
 
-ul .nav {
-  text-align: right;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 10%;
-  background-color: #f1f1f1;
-  height: 100%; /* Full height */
-  position: fixed; /* Make it stick, even on scroll */
-  overflow: auto;
-
-}
-
-/* ul nav {
+ul nav {
   text-align: right;
   list-style-type: none;
   margin: 0;
@@ -29,7 +16,7 @@ ul .nav {
   height: 100%;
   position: fixed;
   overflow: auto;
-} */
+}
 
 li a {
   display: block;

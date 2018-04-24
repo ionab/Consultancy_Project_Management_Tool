@@ -1,13 +1,25 @@
-<h1>Projects<img class = "headerimage" src="/images/consultancy_logo.jpeg" alt="company-logo"></h1>
+<h1>Projects<img class = "headerimage" src="/images/project.png" alt="project-logo"></h1>
 <hr/>
 <p><a href= "/projects/new">Add new project</a>
   <hr/>
+
+<table style = "width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Client</th>
+    <th>Time Budget</th>
+    <th>Expenses Budget</th>
+    <th>Project Status</th>
+    <th>View Details</th>
+  </tr>
 <% @projects.each do |project| %>
-  <p>Name: <%= project.name%> </p>
-  <p>Client: <%= project.client%> </p>
-  <p>Time Budget: £<%= project.time_budget%> </p>
-  <p>Expenses Budget: £<%= project.expenses_budget%> </p>
-  <p>Project Status: <%= project.project_status%> </p>
-  <p><a href="/projects/<%=project.id%>">View Project</a></p>
-<hr/>
+<tr>
+  <td><%= project.name%> </td>
+  <td><%= project.client%> </td>
+  <td>£<%= project.time_budget%> </td>
+  <td>£<%= project.expenses_budget%> </td>
+  <td><%= project.project_status%> </td>
+  <td><a href="/projects/<%=project.id%>">View</a></td>
+<tr/>
 <%end%>
+</table>

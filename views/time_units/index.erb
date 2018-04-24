@@ -1,12 +1,24 @@
-<h1>Timesheets<img class = "headerimage" src="/images/consultancy_logo.jpeg" alt="company-logo"></h1>
+<h1>Timesheets<img class = "headerimage" src="/images/time.png" alt="time-logo"></h1>
 <hr/>
 <p><a href= "/time-units/new">Add new Time</a>
   <hr/>
+
+<table style = "width:100%">
+<tr>
+  <th>Hours</th>
+  <th>Category</th>
+  <th>Project</th>
+  <th>Employee</th>
+  <th>View Details</th>
+</tr>
 <% @time_units.each do |time| %>
-  <p>Hours: <%= time.hours%> </p>
-  <p>Category: <%= time.category%> </p>
-  <p>Project: <%= time.find_project().name %> </p>
-  <p>Employee: <%= time.find_employee().name %> </p>
-  <p><a href="/time-units/<%=time.id%>">View Time</a></p>
-<hr/>
+<tr>
+  <td><%= time.hours%> </td>
+  <td><%= time.category%> </td>
+  <td><%= time.find_project().name %> </td>
+  <td><%= time.find_employee().name %> </td>
+  <td><a href="/time-units/<%=time.id%>">View</a></td>
+</tr>
 <%end%>
+
+</table>
