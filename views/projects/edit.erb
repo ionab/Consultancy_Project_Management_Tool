@@ -13,7 +13,14 @@
   <input type="number"  step="0.01" id="expenses_budget" name="expenses_budget" value= "<%= '%.2f' % @projects.expenses_budget %>">
 
   <label for="project_status">Project Status:</label>
-  <input type="text" id="project_status" name="project_status" value= "<%=@projects.project_status %>">
+  <select name="project_status" id="project_status" value= "<%=@projects.project_status %>">
+    <option value="Open">Open</option>
+    <option value="Proposal">Proposal</option>
+    <option value="Proposal Submitted">Proposal Sumbitted</option>
+    <option value="On Hold">On hold</option>
+    <option value="Complete">Complete</option>
+    <option value="Lost">Lost</option>
+  </select>
 
 <input type="submit" value="Update project">
 

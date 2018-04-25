@@ -6,8 +6,17 @@
   <label for="hours">Hours</label>
   <input type="number"  step="0.01" id="hours" name="hours" value="<%=@time_units.hours%>">
 
-  <label for="category">Category:</label>
-  <input type="text" id="category" name="category" value="<%=@time_units.category%>">
+    <label for="category">Category:</label>
+    <select name="category" id="category" value="<%=@time_units.category%>">
+      <option value="Meeting">Meeting</option>
+      <option value="Project Management">Project Management</option>
+      <option value="Data Management">Data Management</option>
+      <option value="Administration">Administration</option>
+      <option value="Equipment Maintenance">Equipment Maintenance</option>
+      <option value="Reporting">Reporting</option>
+      <option value="Review and Quality Assurance">Review and Quality Assurance</option>
+      <option value="Proposal">Proposal</option>
+    </select>
 
   <label for="project_id">Project:</label>
   <select name="project_id" id="project_id" selected="<%= @time_units.project_id  %>">

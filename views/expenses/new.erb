@@ -5,10 +5,21 @@
 
   <label for="cost_excluding_vat">Cost, excluding VAT(GBP):</label>
   <input type="number"  step="0.01" id="cost_excluding_vat" name="cost_excluding_vat">
+
   <label for="vat">VAT(GBP):</label>
   <input type="number"  step="0.01" id="vat" name = "vat">
+
   <label for="category">Category:</label>
-  <input type="text" id="category" name="category">
+  <select name="category" id="category">
+    <option value="Fuel">Fuel</option>
+    <option value="Hire Car">Hire Car</option>
+    <option value="Equipment">Equipment</option>
+    <option value="Subsistence">Subsistence</option>
+    <option value="Accommodation">Accommodation</option>
+    <option value="Public Transport">Public Transport</option>
+    <option value="Parking">Parking</option>
+  </select>
+
 
   <label for="project_id">Project:</label>
   <select name="project_id" id="project_id">
