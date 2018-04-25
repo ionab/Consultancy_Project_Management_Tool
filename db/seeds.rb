@@ -93,7 +93,7 @@ Project.delete_all()
 
 @employee1 = Employee.new(
   {
-    "name" => "Kelsie Braidwood",
+    "name" => "Joe Bloggs",
     "job_title" => "senior consultant",
     "hourly_rate" => 52
   }
@@ -101,7 +101,7 @@ Project.delete_all()
 @employee1.save
 @employee2 = Employee.new(
   {
-    "name" => "Sinead Reynolds",
+    "name" => "Joe Bloggs",
     "job_title" => "junior consultant",
     "hourly_rate" => 36
   }
@@ -109,7 +109,7 @@ Project.delete_all()
 @employee2.save
 @employee3 = Employee.new(
   {
-    "name" => "Stewart Caldwell",
+    "name" => "Joe Bloggs",
     "job_title" => "consultant",
     "hourly_rate" => 46
   }
@@ -117,7 +117,7 @@ Project.delete_all()
 @employee3
 @employee4 = Employee.new(
   {
-    "name" => "Heather Lafferty",
+    "name" => "Joe Bloggs",
     "job_title" => "senior consultant",
     "hourly_rate" => 52
   }
@@ -125,7 +125,7 @@ Project.delete_all()
 @employee4.save
 @employee5 = Employee.new(
   {
-    "name" => "John Allsopp",
+    "name" => "Joe Bloggs",
     "job_title" => "director",
     "hourly_rate" => 78
   }
@@ -142,7 +142,7 @@ Project.delete_all()
 
 @employee7 = Employee.new(
   {
-    "name" => "Simon Hunter",
+    "name" => "Joe Bloggs",
     "job_title" => "intern",
     "hourly_rate" => 20
   }
@@ -150,7 +150,7 @@ Project.delete_all()
 @employee6.save
 @employee7 = Employee.new(
   {
-    "name" => "Johnathon Miles",
+    "name" => "Joe Bloggs",
     "job_title" => "consultant",
     "hourly_rate" => 46
   }
